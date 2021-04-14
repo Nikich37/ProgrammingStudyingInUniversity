@@ -1,0 +1,13 @@
+Adam 9 1
+Bruce 7 1
+Nikita 5 1
+Kolya 6 1
+Adam 9 2
+Bruce 8 2
+Nikita 6 2
+Kolya 4 2
+Adam 10 3
+Bruce 9 3
+Nikita 8 3
+Kolya 2 3
+

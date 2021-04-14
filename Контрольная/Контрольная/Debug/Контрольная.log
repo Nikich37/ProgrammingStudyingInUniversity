@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\nikit\OneDrive\Рабочий стол\Контрольная\Контрольная\main.cpp(10,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\nikit\OneDrive\Рабочий стол\Контрольная\Контрольная\bidirectional_list_on_array.h(130,2): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\nikit\OneDrive\Рабочий стол\Контрольная\Контрольная\bidirectional_list_on_array.h(127): message : во время компиляции функции-члена класс шаблон "std::vector<int,std::allocator<int>> containers::BiDirectionalList<int>::ToVector(void)"
+C:\Users\nikit\OneDrive\Рабочий стол\Контрольная\Контрольная\main.cpp(9): message : выполняется компиляция ссылки на экземпляр шаблон функции "std::vector<int,std::allocator<int>> containers::BiDirectionalList<int>::ToVector(void)"
+C:\Users\nikit\OneDrive\Рабочий стол\Контрольная\Контрольная\main.cpp(7): message : выполняется компиляция ссылки на экземпляр класс шаблон функции "containers::BiDirectionalList<int>"
+  Контрольная.vcxproj -> C:\Users\nikit\OneDrive\Рабочий стол\Контрольная\Debug\Контрольная.exe

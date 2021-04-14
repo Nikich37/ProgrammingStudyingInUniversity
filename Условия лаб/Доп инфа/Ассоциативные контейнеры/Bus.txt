@@ -1,0 +1,23 @@
+#include <string>
+using namespace std;
+struct autobus{
+	int nomer;
+	string marka;
+	autobus(){}
+	autobus(int n,string m ){nomer=n;marka=m;}
+	}; 
+
+class Bus{
+//private:
+public:
+	int trace;
+	string name;
+	autobus bus;
+
+	Bus(){}
+	Bus(int t, string n, autobus a):trace(t),name(n),bus(a){}
+	Bus(const Bus& b){trace=b.trace; name=b.name; bus=b.bus;}
+	bool operator<(const Bus b);
+	friend istream& operator>>(istream &i, Bus &b);
+	friend ostream& operator<<(ostream &i, Bus b);
+	};

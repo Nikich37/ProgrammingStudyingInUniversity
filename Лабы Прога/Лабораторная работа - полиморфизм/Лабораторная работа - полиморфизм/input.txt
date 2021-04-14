@@ -1,0 +1,8 @@
+6
+volume
+cone 5 7
+cone 4 8
+cylinder 3 4
+cylinder 4 5
+cone 1 6
+cylinder 4 7

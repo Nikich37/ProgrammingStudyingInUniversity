@@ -1,0 +1,49 @@
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <map>
+#include <functional>
+#include <algorithm>
+#include "Bus.h"
+using namespace std;
+
+bool equal_trace1(pair<string,Bus> p,int nn){return p.second.trace==nn;}
+
+class Dr
+{public:
+	string n;
+	Dr(string nn){n=nn;}
+	bool operator()(pair<string,Bus> p){return p.first==n;}
+
+};
+
+int main()
+{  Bus b;
+   vector<Bus> vb;  vector<Bus>::iterator iv,iv2;
+   ifstream f("data.txt");
+       while (!f.eof()){f>>b;  vb.push_back(b);}
+cout<<"Based data"<<endl;
+       for(iv=vb.begin(); iv!=vb.end(); ++iv)cout<<*iv<<endl;           cout<<endl;
+	   sort(iv=vb.begin(), iv2=vb.end());
+	   for(iv=vb.begin(); iv!=vb.end(); ++iv)cout<<*iv<<endl;           cout<<endl;
+
+	   map<string,Bus,less<string> > mb;
+	   map<string,Bus,less<string> >::iterator mi;
+cout<<"Keys of map (names of drivers)"<<endl;
+       for(iv=vb.begin(); iv!=vb.end(); ++iv)
+	         {mb.insert(make_pair(iv->name,*iv));}
+       for(mi=mb.begin(); mi!=mb.end(); ++mi){cout<<mi->first<<endl;}	cout<<endl;
+   
+	int nn; 	cout<<"Enter Nomer of trace"<<endl;	   cin>>nn;
+cout<<"Number of drivers in trace  "<<nn<<"  is  "<<
+	   count_if(mb.begin(),mb.end(),bind2nd(ptr_fun(equal_trace1),nn));	cout<<endl;
+	   for(mi=mb.begin(); mi!=mb.end(); ++mi)
+	       {if(mi->second.trace==nn)cout<<mi->second.name<<endl;}		cout<<endl;
+string dr;cout<<"Enter Name of driver"<<endl;	   cin>>dr;
+	   mi=mb.find(dr);
+	   if(mi!=mb.end())  cout<<"Driver "<<dr<<"  works in trace  "<<mi->second.trace<<endl;
+	   else cout<<"You are wrong"<<endl;								cout<<endl;
+
+cout<<"Je cherche le driver de nouveau"<<endl;
+cout<<"Number of "<<dr<<"  is  "<< count_if(mb.begin(),mb.end(),Dr(dr));	cout<<endl;
+}

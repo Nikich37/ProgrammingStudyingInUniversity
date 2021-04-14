@@ -1,0 +1,6 @@
+﻿  1.cpp
+C:\Users\nikit\source\repos\Лабораторная работа №4\1\1.cpp(40,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\nikit\source\repos\Лабораторная работа №4\1\1.cpp(8,23): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\nikit\source\repos\Лабораторная работа №4\1\1.cpp(34): message : выполняется компиляция ссылки на экземпляр шаблон функции "void BubbleSort<char>(std::vector<char,std::allocator<char>> &)"
+C:\Users\nikit\source\repos\Лабораторная работа №4\1\1.cpp(9,27): warning C4018: <: несоответствие типов со знаком и без знака
+  1.vcxproj -> C:\Users\nikit\source\repos\Лабораторная работа №4\Debug\1.exe
